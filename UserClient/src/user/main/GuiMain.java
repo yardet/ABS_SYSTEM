@@ -3,7 +3,6 @@ package user.main;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import gui.Customers.CustomersController;
-//import gui.Customers.FilteringLoansTask;
 import gui.LoansTables.LoansPendingController;
 import gui.LoansTables.animation2Controller;
 import javafx.application.Application;
@@ -11,9 +10,6 @@ import javafx.application.Platform;
 import javafx.beans.property.FloatProperty;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-/*import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.concurrent.Task;*/
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -34,7 +30,6 @@ import user.components.chatroom.ChatAppMainController;
 import user.components.login.LoginController;
 import user.util.Constants;
 import user.util.http.HttpClientUtil;
-
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Type;
