@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainBorderPain" prefHeight="741.0" prefWidth="942.0" styleClass="skin4" stylesheets="@customerView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.Customers.CustomersController">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" tabMinHeight="20.0" tabMinWidth="20.0" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="informationTab" style="-fx-background-color: CD5C5C;" text="INFORMATION">
+                    <content>
+                        <AnchorPane fx:id="acnhorInformation" styleClass="skin6">
+                            <children>
+                                <SplitPane dividerPositions="0.566068515497553" prefHeight="694.0" prefWidth="922.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane fx:id="acnhorLeftSplitInformation" styleClass="skin6">
+                                            <children>
+                                                <GridPane prefHeight="414.0" prefWidth="452.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <TabPane fx:id="tabPaneLoansLoaner" styleClass="skin6" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+                                                            <tabs>
+                                                                <Tab fx:id="loanNewTabLoaner" text="New" />
+                                                                <Tab fx:id="loanPendingTabLoaner" text="Pending" />
+                                                                <Tab fx:id="loanActiveTabLoaner" text="Active">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab fx:id="loanRiskyTabLoaner" text="Risky">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab fx:id="loanFinishedTabLoaner" text="Finished">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                                    </content>
+                                                                </Tab>
+                                                            </tabs>
+                                                        </TabPane>
+                                                        <GridPane fx:id="loanerLoansGrid" styleClass="skin1">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="234.0" minWidth="10.0" prefWidth="119.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="10.0" prefWidth="236.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="90.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label prefHeight="27.0" prefWidth="109.0" text="Owner loans" GridPane.columnIndex="1">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                        <GridPane fx:id="lednerLoansGrid" styleClass="skin1" GridPane.rowIndex="2">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="146.0" minWidth="10.0" prefWidth="139.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="167.0" minWidth="10.0" prefWidth="163.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label text="Lender loans" GridPane.columnIndex="1">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                        <TabPane fx:id="tabPaneLoansLender" styleClass="skin6" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="3">
+                                                            <tabs>
+                                                                <Tab fx:id="loanNewTabLender" text="New" />
+                                                                <Tab fx:id="loanPendingTabLender" text="Pending" />
+                                                                <Tab fx:id="loanActiveTabLender" text="Active">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab fx:id="loanRiskyTabLender" text="Risky">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab fx:id="loanFinishedTabLender" text="Finished">
+                                                                    <content>
+                                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                                    </content>
+                                                                </Tab>
+                                                            </tabs>
+                                                            <GridPane.margin>
+                                                                <Insets />
+                                                            </GridPane.margin>
+                                                        </TabPane>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="acnhorRightSplitInformation" style="-fx-background-color: FFA500;">
+                                            <children>
+                                                <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="-Infinity" minHeight="78.0" prefHeight="78.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <TableView fx:id="transactionsTable" GridPane.rowIndex="1">
+                                                            <columns>
+                                                                <TableColumn fx:id="transactionsYaz" prefWidth="30.0" text="YAZ" />
+                                                                <TableColumn fx:id="transactionsAmount" prefWidth="69.0" text="Amount" />
+                                                                <TableColumn fx:id="transactionsType" prefWidth="43.0" text="Type" />
+                                                                <TableColumn fx:id="transactionsBefore" prefWidth="51.0" text="Before" />
+                                                                <TableColumn fx:id="transactionsAfter" prefWidth="62.0" text="After" />
+                                                            </columns>
+                                                            <padding>
+                                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                            </padding>
+                                                            <GridPane.margin>
+                                                                <Insets />
+                                                            </GridPane.margin>
+                                                        </TableView>
+                                                        <GridPane prefHeight="180.0" prefWidth="392.0" GridPane.rowIndex="2">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="86.0" minWidth="10.0" prefWidth="52.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.0" minWidth="10.0" prefWidth="113.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Button fx:id="withdrawMoneyB" mnemonicParsing="false" onAction="#withdrawAction" prefHeight="42.0" prefWidth="174.0" text="WITHDRAW" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.valignment="BOTTOM">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                    </font>
+                                                                    <GridPane.margin>
+                                                                        <Insets bottom="5.0" />
+                                                                    </GridPane.margin>
+                                                                </Button>
+                                                                <Button fx:id="chargeMoneyB" mnemonicParsing="false" onAction="#chargeAction" prefHeight="42.0" prefWidth="173.0" text="CHARGE" GridPane.halignment="LEFT" GridPane.valignment="BOTTOM">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="15.0" />
+                                                                    </font>
+                                                                    <GridPane.margin>
+                                                                        <Insets bottom="5.0" />
+                                                                    </GridPane.margin>
+                                                                </Button>
+                                                            </children>
+                                                        </GridPane>
+                                                        <GridPane fx:id="transactionGrid" styleClass="skin1">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="127.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="50.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label prefHeight="27.0" prefWidth="125.0" text="Transactions" GridPane.columnIndex="1">
+                                                                    <GridPane.margin>
+                                                                        <Insets />
+                                                                    </GridPane.margin>
+                                                                    <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="startScramble" style="-fx-background-color: #9FE2BF;" text="SCRAMBLE">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <SplitPane dividerPositions="0.6487804878048781" prefHeight="694.0" prefWidth="922.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane>
+                                            <children>
+                                                <GridPane fx:id="scrambleLeftGrid" prefHeight="454.0" prefWidth="525.0" styleClass="skin3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="215.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="165.0" />
+                                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="214.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <CheckBox fx:id="minimumInterestCheckBox" mnemonicParsing="false" onAction="#minimumInterestCheckBoxAction" text="Minimum Interest:" GridPane.rowIndex="4">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </CheckBox>
+                                                        <TextField fx:id="amountTextBox" prefHeight="25.0" prefWidth="201.0" promptText="Amount:" GridPane.columnIndex="1" GridPane.halignment="CENTER" />
+                                                        <Label text="Enter amount:">
+                                                            <font>
+                                                                <Font size="20.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </Label>
+                                                        <Label text="Choose categries:" GridPane.rowIndex="2">
+                                                            <font>
+                                                                <Font size="20.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </Label>
+                                                        <Button fx:id="submitFilterB" mnemonicParsing="false" onAction="#submitFilterFunc" prefHeight="42.0" prefWidth="148.0" text="Filter" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                                                            <font>
+                                                                <Font name="System Bold" size="19.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets />
+                                                            </GridPane.margin>
+                                                            <padding>
+                                                                <Insets bottom="5.0" />
+                                                            </padding>
+                                                        </Button>
+                                                        <TextField fx:id="minimumDurationText" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                                                        <CheckBox fx:id="minimumDurationCheckBox" mnemonicParsing="false" onAction="#minimumDurationCheckBoxAction" text="Minimum duration:" GridPane.rowIndex="3">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </CheckBox>
+                                                        <TextField fx:id="minimumInterestText" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                                                        <CheckBox fx:id="maximumOpenCheckBox" mnemonicParsing="false" onAction="#maximumOpenCheckBoxAction" text="Maximum open loans:" GridPane.rowIndex="5">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </CheckBox>
+                                                        <TextField fx:id="maximumOpenText" prefHeight="25.0" prefWidth="205.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                                                        <CheckBox fx:id="maximumPercentCheckBox" mnemonicParsing="false" onAction="#maximumPercentCheckBoxAction" text="Maximum percent:" GridPane.rowIndex="6">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </CheckBox>
+                                                        <TextField fx:id="maximumPercentText" prefHeight="25.0" prefWidth="176.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                                                        <ProgressBar fx:id="progressScroll" prefWidth="189.0" progress="0.0" GridPane.halignment="CENTER" GridPane.rowIndex="8">
+                                                            <GridPane.margin>
+                                                                <Insets bottom="5.0" />
+                                                            </GridPane.margin>
+                                                        </ProgressBar>
+                                                        <Label text="Filter by:" GridPane.rowIndex="1">
+                                                            <font>
+                                                                <Font name="System Bold Italic" size="22.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets left="5.0" />
+                                                            </GridPane.margin>
+                                                        </Label>
+                                                        <Label text="\%" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                                        <Label text="\%" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                                        <Label fx:id="notEnoghMoneyL" text="Not enogh money" GridPane.columnIndex="2" GridPane.halignment="CENTER">
+                                                            <font>
+                                                                <Font name="System Bold" size="10.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <MenuButton fx:id="categoriesSelection" mnemonicParsing="false" prefHeight="25.0" prefWidth="173.0" text="Categories" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="rightScrambleAnchor" style="-fx-background-color: FFA500;">
+                                            <children>
+                                                <GridPane fx:id="gridTableLoans" layoutY="-5.0" prefHeight="692.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <GridPane fx:id="rightScrambleGrid" styleClass="skin1">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="82.0" minWidth="10.0" prefWidth="49.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="154.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="66.0" minWidth="10.0" prefWidth="13.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label text=" Filtered loans" GridPane.columnIndex="1">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                                <Label text="Choose multiple loans" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="14.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                        <Button fx:id="submitScambleB" mnemonicParsing="false" onAction="#submitScrambleFunc" text="Submit Invest loans" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                                                            <font>
+                                                                <Font size="23.0" />
+                                                            </font>
+                                                            <GridPane.margin>
+                                                                <Insets bottom="10.0" />
+                                                            </GridPane.margin>
+                                                        </Button>
+                                                        <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+                                                            <tabs>
+                                                                <Tab fx:id="filteredLoansTab" text="Loans results:">
+                                                                    <content>
+                                                                        <AnchorPane />
+                                                                    </content>
+                                                                </Tab>
+                                                            </tabs>
+                                                        </TabPane>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="paymentsTab" style="-fx-background-color: #40E0D0;" text="PAYMENTS">
+                    <content>
+                        <AnchorPane>
+                            <children>
+                                <SplitPane dividerPositions="0.5347298787210585" layoutX="15.0" prefHeight="694.0" prefWidth="922.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                    <items>
+                                        <AnchorPane fx:id="leftPaymentsAnchor" styleClass="skin6">
+                                            <children>
+                                                <GridPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="549.0" minHeight="10.0" prefHeight="275.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints maxHeight="504.0" minHeight="10.0" prefHeight="377.0" vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <TabPane fx:id="tabPanePayments" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="1">
+                                                            <tabs>
+                                                                <Tab fx:id="loanNewTabPayments" text="New" />
+                                                                <Tab fx:id="loanPendingTabPayments" text="Pending" />
+                                                                <Tab fx:id="loanActiveTabPayments" text="Active">
+                                                                    <content>
+                                                                        <AnchorPane />
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab fx:id="loanRiskyTabPayments" text="Risky">
+                                                                    <content>
+                                                                        <AnchorPane />
+                                                                    </content>
+                                                                </Tab>
+                                                                <Tab fx:id="loanFinishedTabPayments" text="Finished">
+                                                                    <content>
+                                                                        <AnchorPane />
+                                                                    </content>
+                                                                </Tab>
+                                                            </tabs>
+                                                        </TabPane>
+                                                        <GridPane fx:id="loanerTableGrid" styleClass="skin1">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" prefWidth="82.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="73.0" minWidth="10.0" prefWidth="43.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label contentDisplay="CENTER" text="Loaner Loans table" textAlignment="CENTER" GridPane.columnIndex="1">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                        <TabPane fx:id="tabPanePayements" tabClosingPolicy="UNAVAILABLE" GridPane.rowIndex="2">
+                                                            <tabs>
+                                                                <Tab fx:id="futureTabPayments" text="payments control">
+                                                                    <content>
+                                                                        <AnchorPane />
+                                                                    </content>
+                                                                </Tab>
+                                                            </tabs>
+                                                        </TabPane>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                        </AnchorPane>
+                                        <AnchorPane fx:id="rightPaymentsAnchor" styleClass="skin6">
+                                            <children>
+                                                <GridPane layoutX="10.0" layoutY="10.0" prefHeight="682.0" prefWidth="420.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                    <columnConstraints>
+                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                                                    </columnConstraints>
+                                                    <rowConstraints>
+                                                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                        <RowConstraints vgrow="SOMETIMES" />
+                                                    </rowConstraints>
+                                                    <children>
+                                                        <TableView fx:id="notoficationsPayments" GridPane.rowIndex="1">
+                                                            <columns>
+                                                                <TableColumn fx:id="notificationName" prefWidth="137.0" text="Loan name" />
+                                                                <TableColumn fx:id="notificationYaz" prefWidth="84.0" text="Yaz" />
+                                                                <TableColumn fx:id="notificationAmount" prefWidth="115.0" text="Final amount" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <GridPane fx:id="notoficationsGrid" prefHeight="444.0" prefWidth="371.0" styleClass="skin1">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                        </GridPane>
+                                                        <GridPane fx:id="notoficationsGrid" styleClass="skin1">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="97.0" minWidth="10.0" prefWidth="90.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label prefHeight="27.0" prefWidth="149.0" text="Notifications" GridPane.columnIndex="1">
+                                                                    <font>
+                                                                        <Font name="System Bold" size="18.0" />
+                                                                    </font>
+                                                                </Label>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </GridPane>
+                                            </children>
+                                            <opaqueInsets>
+                                                <Insets top="10.0" />
+                                            </opaqueInsets>
+                                            <padding>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </padding>
+                                        </AnchorPane>
+                                    </items>
+                                </SplitPane>
+                            </children>
+                            <padding>
+                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                            </padding>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            <Tab fx:id="newLoanTab" style="-fx-background-color: FF0000;" text="NEW LOAN">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            <Tab fx:id="sellBuyTab" style="-fx-background-color: FFA500;" text="SELL/BUY LOANS">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>

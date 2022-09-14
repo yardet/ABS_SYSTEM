@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<TableView fx:id="loansTable" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoansTables.LoansNewController">
+   <columns>
+      <TableColumn fx:id="loanId" prefWidth="120.6666259765625" text="ID" />
+      <TableColumn fx:id="loanOwner" prefWidth="80.66668701171875" text="Owner" />
+      <TableColumn fx:id="loanCategory" prefWidth="90.0" text="Category" />
+      <TableColumn fx:id="loanCapital" prefWidth="85.3333740234375" text="Capital" />
+      <TableColumn fx:id="loanInterest" prefWidth="65.3333740234375" text="Interest" />
+      <TableColumn fx:id="loanDuration" prefWidth="57.3333740234375" text="Duration" />
+      <TableColumn fx:id="loanRate" prefWidth="52.66668701171875" text="Rate" />
+      <TableColumn fx:id="loanStatus" prefWidth="54.0" text="Status" />
+   </columns>
+</TableView>

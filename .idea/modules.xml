@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdminClient/AdminClient.iml" filepath="$PROJECT_DIR$/AdminClient/AdminClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ChatLogIcEngine/ChatLogIcEngine.iml" filepath="$PROJECT_DIR$/ChatLogIcEngine/ChatLogIcEngine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DTO/DTO.iml" filepath="$PROJECT_DIR$/DTO/DTO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Engine/Engine.iml" filepath="$PROJECT_DIR$/Engine/Engine.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVAFX/JAVAFX.iml" filepath="$PROJECT_DIR$/JAVAFX/JAVAFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Server/Server.iml" filepath="$PROJECT_DIR$/Server/Server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/UserClient/UserClient.iml" filepath="$PROJECT_DIR$/UserClient/UserClient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/javaFxProject.iml" filepath="$PROJECT_DIR$/.idea/javaFxProject.iml" />
+    </modules>
+  </component>
+</project>

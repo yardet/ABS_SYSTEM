@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoansTables.LendersController">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="393.0" prefWidth="240.0" style="-fx-background-color: A8C311;">
+         <top>
+            <Label style="-fx-background-color: A8C311;" text="Ledners list" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="lendersTable" prefHeight="337.0" prefWidth="258.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="lenderName" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="lenderInvestment" prefWidth="172.66668701171875" text="Inverstment amount " />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </content>
+</ScrollPane>

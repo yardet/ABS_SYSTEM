@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fx:id="mainScroll" styleClass="skin2" stylesheets="@../../../../../AdminClient/src/admin/components/main/mainView.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="user.components.main.mainController">
+   <content>
+      <BorderPane fx:id="mainPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="654.0" prefWidth="1144.0" styleClass="skin2">
+         <top>
+            <GridPane fx:id="toolBar" styleClass="skin7" BorderPane.alignment="CENTER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="921.0" minWidth="10.0" prefWidth="177.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="683.0" minWidth="10.0" prefWidth="681.0" />
+                  <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                  <ColumnConstraints maxWidth="305.33333333333326" minWidth="305.33333333333326" prefWidth="305.33333333333326" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <GridPane prefHeight="50.0" prefWidth="305.0" GridPane.columnIndex="3">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.6666259765625" minWidth="80.0" prefWidth="116.6666259765625" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="80.0" minWidth="14.3333740234375" prefWidth="14.3333740234375" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="75.66664632161456" prefWidth="158.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints maxHeight="50.0" minHeight="50.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <GridPane prefHeight="30.0" prefWidth="115.0" GridPane.columnIndex="2">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="skinCombo" onAction="#skinComboAction" prefHeight="43.0" prefWidth="135.0" promptText="skin/animation" GridPane.halignment="RIGHT">
+                                 <GridPane.margin>
+                                    <Insets left="10.0" />
+                                 </GridPane.margin>
+                              </ComboBox>
+                           </children>
+                        </GridPane>
+                        <Button fx:id="loadFileB" mnemonicParsing="false" onAction="#loadFileButtonAction" prefHeight="40.0" prefWidth="141.0" text="Upload file" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </GridPane>
+                  <GridPane prefHeight="50.0" prefWidth="645.0" GridPane.columnIndex="1">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <Label fx:id="yazLabel" minWidth="44.0" prefHeight="33.0" prefWidth="44.0" text="Label" GridPane.columnIndex="1" GridPane.halignment="LEFT">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label minWidth="73.0" prefHeight="24.0" prefWidth="73.0" text="YAZ:" GridPane.halignment="RIGHT">
+                           <font>
+                              <Font size="31.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </GridPane>
+                  <Label fx:id="userNameLabel" prefHeight="34.0" prefWidth="199.0" text="Label">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </GridPane>
+         </top>
+      </BorderPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="Server:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/Server_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="Server" />
+          <element id="module-output" name="Engine" />
+          <element id="module-output" name="JAVAFX" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="google-gson-2" />
+          <element id="library" level="project" name="okHttp" />
+          <element id="artifact" artifact-name="ChatLogIcEngine:jar" />
+          <element id="artifact" artifact-name="DTO:jar" />
+          <element id="artifact" artifact-name="Engine:jar" />
+          <element id="artifact" artifact-name="JAVAFX:jar" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="Server/web/Web" />
+    </root>
+  </artifact>
+</component>

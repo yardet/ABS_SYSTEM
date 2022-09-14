@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoansTables.PaymentsController">
+   <content>
+      <BorderPane prefHeight="500.0" prefWidth="740.0" style="-fx-background-color: A8C311;">
+         <top>
+            <Label style="-fx-background-color: A8C311;" text="Payments" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="paymentsTable" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="yaz" prefWidth="164.0" text="Yaz" />
+                  <TableColumn fx:id="capital" prefWidth="127.0" text="Capital" />
+                  <TableColumn fx:id="interest" prefWidth="136.0" text="Interest" />
+                  <TableColumn fx:id="total" prefWidth="175.0" text="Total" />
+               </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <TextField fx:id="sumText" promptText="Sum:" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+         </bottom>
+      </BorderPane>
+   </content>
+</ScrollPane>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <servlet-name>LoadingWithdrawMoneyServlet</servlet-name>
+        <servlet-class>chat.servlets.LoadingWithdrawMoneyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AllLoansServlet</servlet-name>
+        <servlet-class>chat.servlets.AllLoansServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AllCustomersServlet</servlet-name>
+        <servlet-class>chat.servlets.AllCustomersServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AllBuyLoansServlet</servlet-name>
+        <servlet-class>chat.servlets.AllBuyLoansServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>buySellLoanServlet</servlet-name>
+        <servlet-class>chat.servlets.buySellLoanServlet</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>AllCategoriesServlet</servlet-name>
+        <servlet-class>chat.servlets.AllCategoriesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CurrentYAZServlet</servlet-name>
+        <servlet-class>chat.servlets.CurrentYAZServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UploadFileServlet</servlet-name>
+        <servlet-class>chat.servlets.UploadFileServlet</servlet-class>
+    </servlet>
+
+
+    <servlet>
+        <servlet-name>ChatServlet</servlet-name>
+        <servlet-class>chat.servlets.ChatServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>chat.servlets.LoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginShortResponseServlet</servlet-name>
+        <servlet-class>chat.servlets.LightweightLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UsersListServlet</servlet-name>
+        <servlet-class>chat.servlets.UsersListServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>FilteringServlet</servlet-name>
+        <servlet-class>chat.servlets.FilteringServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SchedulingServlet</servlet-name>
+        <servlet-class>chat.servlets.SchedulingServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateNewLoanServlet</servlet-name>
+        <servlet-class>chat.servlets.CreateNewLoanServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PayPaymentsServlet</servlet-name>
+        <servlet-class>chat.servlets.PayPaymentsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DecreaseYazServlet</servlet-name>
+        <servlet-class>chat.servlets.DecreaseYazServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IncreaseYazServlet</servlet-name>
+        <servlet-class>chat.servlets.IncreaseYazServlet</servlet-class>
+    </servlet>
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>DecreaseYazServlet</servlet-name>
+        <url-pattern>/decreaseYaz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IncreaseYazServlet</servlet-name>
+        <url-pattern>/increaseYaz</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>PayPaymentsServlet</servlet-name>
+        <url-pattern>/payPayments</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FilteringServlet</servlet-name>
+        <url-pattern>/filtering</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SchedulingServlet</servlet-name>
+        <url-pattern>/scheduling</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateNewLoanServlet</servlet-name>
+        <url-pattern>/createNewLoan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoadingWithdrawMoneyServlet</servlet-name>
+        <url-pattern>/loadingWithdrawMoney</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UploadFileServlet</servlet-name>
+        <url-pattern>/loadingXmlFile</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AllCategoriesServlet</servlet-name>
+        <url-pattern>/getAllCategories</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>buySellLoanServlet</servlet-name>
+        <url-pattern>/setBuySellLoan</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet-mapping>
+        <servlet-name>AllBuyLoansServlet</servlet-name>
+        <url-pattern>/getAllBuyLoans</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>AllCustomersServlet</servlet-name>
+        <url-pattern>/getAllCustomers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AllLoansServlet</servlet-name>
+        <url-pattern>/getAllLoans</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CurrentYAZServlet</servlet-name>
+        <url-pattern>/getCurrentYaz</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChatServlet</servlet-name>
+        <url-pattern>/chat</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/pages/signup/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginShortResponseServlet</servlet-name>
+        <url-pattern>/loginShortResponse</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UsersListServlet</servlet-name>
+        <url-pattern>/userslist</url-pattern>
+    </servlet-mapping>
+
+</web-app>

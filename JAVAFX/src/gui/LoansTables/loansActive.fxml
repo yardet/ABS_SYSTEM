@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<TableView fx:id="loansTable" onMouseClicked="#Handle" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoansTables.LoansActiveController">
+   <columns>
+      <TableColumn fx:id="loanId" prefWidth="120.6666259765625" text="ID" />
+      <TableColumn fx:id="loanOwner" prefWidth="80.66668701171875" text="Owner" />
+      <TableColumn fx:id="loanCategory" prefWidth="90.0" text="Category" />
+      <TableColumn fx:id="loanCapital" prefWidth="85.3333740234375" text="Capital" />
+      <TableColumn fx:id="loanInterest" prefWidth="65.3333740234375" text="Interest" />
+      <TableColumn fx:id="loanDuration" prefWidth="57.3333740234375" text="Duration" />
+      <TableColumn fx:id="loanRate" prefWidth="52.66668701171875" text="Rate" />
+      <TableColumn fx:id="loanStatus" prefWidth="54.0" text="Status" />
+      <TableColumn fx:id="lenders" prefWidth="75.0" text="Lenders" />
+      <TableColumn fx:id="yazActived" prefWidth="75.0" text="activated at" />
+      <TableColumn fx:id="nextYaz" prefWidth="75.0" text="next Yaz" />
+      <TableColumn fx:id="capitalRasied" prefWidth="75.0" text="Capital rasied" />
+      <TableColumn fx:id="capitalLeftToPay" prefWidth="75.0" text="Capital left to pay" />
+      <TableColumn fx:id="interestRaised" prefWidth="75.0" text="Interest raised" />
+      <TableColumn fx:id="interestLeftToPay" prefWidth="75.0" text="Interest Left to pay" />
+      <TableColumn fx:id="activePayments" prefWidth="75.0" text="Active Payments" />
+   </columns>
+</TableView>

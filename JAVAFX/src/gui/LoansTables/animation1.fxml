@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoansTables.animation1Controller">
+   <content>
+      <AnchorPane prefHeight="345.0" prefWidth="304.0" style="-fx-background-color: C34911;">
+         <children>
+            <Circle fx:id="c1" fill="DODGERBLUE" layoutX="152.0" layoutY="173.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="15.0" style="-fx-stroke-dash-array: 50;" />
+            <Circle fx:id="c2" fill="DODGERBLUE" layoutX="152.0" layoutY="173.0" radius="64.0" stroke="#430d3b" strokeType="INSIDE" strokeWidth="15.0" style="-fx-stroke-dash-array: 50;" />
+            <Circle fx:id="c3" fill="DODGERBLUE" layoutX="152.0" layoutY="173.0" radius="32.0" stroke="#295e2b" strokeType="INSIDE" strokeWidth="15.0" style="-fx-stroke-dash-array: 50;" />
+            <Button fx:id="playAnimation" layoutX="61.0" layoutY="2.0" mnemonicParsing="false" onAction="#playAnimation" prefHeight="24.0" prefWidth="181.0" style="-fx-background-color: A8C311;" text="Play animation" textAlignment="CENTER">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

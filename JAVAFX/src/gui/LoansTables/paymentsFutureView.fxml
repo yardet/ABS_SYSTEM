@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<ScrollPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoansTables.PaymentsFutureViewController">
+   <content>
+      <BorderPane style="-fx-background-color: A8C311;">
+         <top>
+            <Label style="-fx-background-color: A8C311;" text="Future payments" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </Label>
+         </top>
+         <center>
+            <TableView fx:id="paymentsTable" prefHeight="400.0" prefWidth="865.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="loanId" prefWidth="150.0" text="Loan ID" />
+                  <TableColumn fx:id="yaz" minWidth="5.333343505859375" prefWidth="64.0" text="Yaz" />
+                  <TableColumn fx:id="capital" prefWidth="70.0" text="Capital" />
+                  <TableColumn fx:id="interest" prefWidth="94.0" text="Interest" />
+                  <TableColumn fx:id="total" prefWidth="137.0" text="Total" />
+                  <TableColumn fx:id="payButton" minWidth="0.0" prefWidth="96.0" text="PAY" />
+               </columns>
+            </TableView>
+         </center>
+         <bottom>
+            <TextField fx:id="sumText" promptText="Sum:" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextField>
+         </bottom>
+      </BorderPane>
+   </content>
+</ScrollPane>
