@@ -56,13 +56,11 @@ public class GuiMain extends Application {
     private String loginName;
     private Timer timer;
 
-    //private EngineInterface api;
     private ChatAppMainController chatAppMainController;
 
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //this.api=new Engine();
         this.primaryStage=primaryStage;
         this.primaryStage.setTitle("ABS APP");
         showMainView();
@@ -101,11 +99,8 @@ public class GuiMain extends Application {
             customersController.setMainController(this.mainController);
             customersController.setLoginName(mainController.getLoginName());
             customersController.initNewLoanFxml();
-            //customersController.initBuySellFxml();
             this.mainController.setCustomerController(customersController);
-          //  getAllcategroiesNames();
-          //  customersController.setCategoriesNames();
-            this.isCustomerLoaded=true;//TODO
+            this.isCustomerLoaded=true;
         }
         else
         {
@@ -200,7 +195,6 @@ public class GuiMain extends Application {
                 }
             }
         });
-        //return loansInfo[0];
     }
 
     public void getAllcategroiesNames(){
@@ -237,7 +231,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());
                 } else{
                     Platform.runLater(() -> {
                         try {
@@ -256,12 +249,9 @@ public class GuiMain extends Application {
                 }
             }
         });
-
-        //return categoryInfo[0];
     }
 
     public void getCustomersInfo(){
-        //return  api.getAllCustomersInfo();
         final List[] customerInfo = new List[]{new ArrayList<>()};
         String finalUrlInformation = HttpUrl.parse(GET_CUSTOMER_PAGE)
                 .newBuilder()
@@ -294,7 +284,6 @@ public class GuiMain extends Application {
                             e.printStackTrace();
                         }
                     });
-                    //System.out.println(response.body());//TODO
                 } else{
                     Platform.runLater(() -> {
                         try {
@@ -304,7 +293,6 @@ public class GuiMain extends Application {
                             mainController.updateCustomers(customerDTOS);
                             //System.out.println(response.body().string());
                             response.body().close();
-                            //openTextDialogText(LOAD_OK);
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -314,11 +302,9 @@ public class GuiMain extends Application {
                 }
             }
         });
-        //return customerInfo[0];
     }
 
     public void getBuyLoans() {
-        //return this.api.getBuyLoans(loginName);
         final List<LoanDTO>[] loansInfo = new List[]{new ArrayList<>()};
         String finalUrlInformation = HttpUrl.parse(GET_BUY_LOANS_PAGE)
                 .newBuilder()
@@ -351,7 +337,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());//TODO
                 } else{
                     Platform.runLater(() -> {
 
@@ -360,9 +345,7 @@ public class GuiMain extends Application {
                             String jsonArrayOfInformation = response.body().string();
                             loanDTOS = GSON_INSTANCE.fromJson(jsonArrayOfInformation, new TypeToken<List<LoanDTO>>(){}.getType());
                             mainController.updateBuyLoans(loanDTOS);
-                            //System.out.println(response.body().string());
                             response.body().close();
-                            //openTextDialogText(LOAD_OK);
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -371,11 +354,8 @@ public class GuiMain extends Application {
                 }
             }
         });
-
-        //return loansInfo[0];
     }
     public void updateCurrentYaz(){
-        //return this.api.getCurrentYaz();
         final int[] currentYaz = new int[1];
         String finalUrlInformation = HttpUrl.parse(GET_CURRENT_YAZ_PAGE)
                 .newBuilder()
@@ -408,7 +388,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());
                 } else{
                     Platform.runLater(() -> {
                         try {
@@ -420,7 +399,6 @@ public class GuiMain extends Application {
                             mainController.updateSystemStatus(new boolean[]{systemStatus.equals("t") ? true :
                                     false});
                             response.body().close();
-                            //openTextDialogText(LOAD_OK);
 
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -429,7 +407,6 @@ public class GuiMain extends Application {
                 }
             }
         });
-        // return currentYaz[0];
 
     }
     public List<LoanDTO> filteringLoansByParameters(LoansPendingController filteredLoansController, FloatProperty progress, Button submitScambleB, float amount, List<String> categoriesNames, float minimumInterest
@@ -483,7 +460,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());
                 } else{
 
                     Platform.runLater(() -> {
@@ -624,7 +600,6 @@ public class GuiMain extends Application {
     }
 
     public void sendAmountFromPayToApi(String loanId, float amount, boolean isPayAllPayments) {
-        //this.api.payPayments(loanId,amount,isPayAllPayments);
         String finalUrlInformation = HttpUrl.parse(PAY_PAYMENT_PAGE)
                 .newBuilder()
                 .addQueryParameter("loanId", loanId)
@@ -658,7 +633,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());//TODO
                 } else{
                     Platform.runLater(() -> {
                         response.body().close();
@@ -674,8 +648,7 @@ public class GuiMain extends Application {
     }
 
     public void createNewLoan(String id, String loginName, String category, int capital, float interest, int totalYazTime, int paymentRate) {
-        //this.api.createNewLoan(id,loginName,category,capital,interest,totalYazTime,paymentRate);
-        //finalUrl
+        
         String finalUrlInformation = HttpUrl.parse(CREATE_NEW_LOAN_PAGE)
                 .newBuilder()
                 .addQueryParameter("id", id)
@@ -715,7 +688,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());//TODO
                 } else{
                     Platform.runLater(() -> {
 
@@ -749,12 +721,7 @@ public class GuiMain extends Application {
             public void onFailure(Call call, IOException e) {
                 System.out.println("call = " + call + ", e = " + e);
                 Platform.runLater(() ->{
-                    errorMessageProperty.set("Something went wrong: " + e.getMessage());
-                    /*try {
-                        openTextDialogText(String.valueOf(errorMessageProperty));
-                    } catch (Exception xe) {
-                        xe.printStackTrace();
-                    }*/
+                    errorMessageProperty.set("Something went wrong: " + e.getMessage())
 
                 } );
             }
@@ -770,7 +737,6 @@ public class GuiMain extends Application {
                         }
                         response.body().close();
                     });
-                    //System.out.println(response.body());//TODO
                 } else{
                     Platform.runLater(() -> {
                         response.body().close();
@@ -789,7 +755,6 @@ public class GuiMain extends Application {
     public void scheduling(Set<String> selectedLoansId,String customerName
             ,int amount,int percentLoan) throws Exception//6
     {
-        //api.scheduling(selectedLoansId,customerName,amount,percentLoan);
         //Gson
         Gson gson = new Gson();
         String json = gson.toJson(selectedLoansId);
@@ -834,7 +799,6 @@ public class GuiMain extends Application {
                             e.printStackTrace();
                         }
                     });
-                    //System.out.println(response.body());//TODO
                 } else{
                     Platform.runLater(() -> {
                         response.body().close();
